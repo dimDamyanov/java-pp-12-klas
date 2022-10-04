@@ -23,4 +23,9 @@ public class SalariedEmployee extends Employee {
 	public double getPaymentAmount() {
 		return weeklySalary;
 	}
+	
+	@Override
+	public String toString() {
+		return String.format("salaried employee: %s\nweekly salary: %.2f", super.toString(), this.weeklySalary);
+	}
 }

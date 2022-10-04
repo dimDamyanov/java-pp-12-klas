@@ -32,6 +32,6 @@ public abstract class Employee implements Payable {
 	}
 	
 	public String toString() {
-		return String.format("%s %s - %s", this.firstName, this.lastName, this.socialSecurityNumber);
+		return String.format("%s %s\nsocial security number: %s", this.firstName, this.lastName, this.socialSecurityNumber);
 	}
 }
