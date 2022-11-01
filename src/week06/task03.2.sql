@@ -1,0 +1,11 @@
+INSERT INTO teams (teamName, teamColorHome, teamColorAway, captainId) VALUES ('PFC LEVSKI', 'blue', 'white', 1);
+INSERT INTO teams (teamName, teamColorHome, teamColorAway, captainId) VALUES ('PFC Liverpool', 'red', 'white', 2);
+INSERT INTO teams (teamName, teamColorHome, teamColorAway, captainId) VALUES ('PFC Crystal Palace', 'blue/red', 'white/red', 3);
+INSERT INTO players (teamId, playerName, birthDate) VALUES (1, 'Nikolay Mihailov', '28-06-1988');
+INSERT INTO players (teamId, playerName, birthDate) VALUES (2, 'Jordan Henderson', '17-06-1990');
+INSERT INTO players (teamId, playerName, birthDate) VALUES (3, 'Luka Milivojevic', '07-04-1991');
+INSERT INTO fans (fanName, ssn, favouriteTeams, favouritePlayers) VALUES ('Dimitar Damyanov', '044614****', '[1, 2]', '[1, 3]');
+INSERT INTO fans (fanName, ssn, favouriteTeams, favouritePlayers) VALUES ('Ivan Iliev', '761014****', '[1, 3]', '[2, 3]');
+INSERT INTO fans (fanName, ssn, favouriteTeams, favouritePlayers) VALUES ('Iliyan Ivanov', '620518****', '[2, 3]', '[1, 2]');
+UPDATE teams SET teamName = 'Levski Vekoven' WHERE teamId = 1;
+DELETE FROM fans WHERE fanName = 'Ivan Iliev';
