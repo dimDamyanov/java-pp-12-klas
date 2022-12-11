@@ -1,9 +1,0 @@
-/**
- * 
- */
-/**
- * @author dDamyanov
- *
- */
-module InitialProject {
-}
