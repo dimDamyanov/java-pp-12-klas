@@ -1,0 +1,2 @@
+-- Task 05
+SELECT t1.capital AS 'Place', t1.country_name AS 'Player 1 (Host)', '' AS 'Host', '' AS 'Guest', t2.country_name AS 'Player 2 (Guest)' FROM countries t1, countries t2 WHERE t1.continent_code = (SELECT continents.continent_code FROM continents WHERE continents.continent_name = 'Europe') AND t2.continent_code = (SELECT continents.continent_code FROM continents WHERE continents.continent_name = 'Europe') AND t1.country_code <> t2.country_code ORDER BY RAND();

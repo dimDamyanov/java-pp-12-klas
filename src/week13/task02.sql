@@ -1,0 +1,5 @@
+-- Task 02
+SELECT product.maker, product.model, product.type FROM product WHERE (SELECT IF(product.type = 'PC', NOT EXISTS(SELECT * FROM pc WHERE pc.model = product.model), IF (product.type = 'laptop', NOT EXISTS(SELECT * FROM laptop WHERE laptop.model = product.model), NOT EXISTS(SELECT * FROM printer WHERE printer.model = product.model))));
+SELECT DISTINCT product.maker FROM product WHERE product.maker IN (SELECT DISTINCT product.maker FROM product INNER JOIN laptop ON product.model = laptop.model) AND product.maker IN (SELECT DISTINCT product.maker FROM product INNER JOIN printer ON product.model = printer.model);
+SELECT t.hd FROM (SELECT laptop.hd AS hd, COUNT(*) AS num FROM laptop GROUP BY laptop.hd) t WHERE t.num >= 2;
+SELECT pc.model FROM pc WHERE NOT EXISTS(SELECT * FROM product WHERE product.model = pc.model);
